@@ -83,6 +83,7 @@ export interface Game extends Omit<CatalogueEntry, "cover"> {
   progress: number;
   fileVerificationProgress: number;
   bytesDownloaded: number;
+  debridCachingProgress: number;
   playTimeInMilliseconds: number;
   executablePath: string | null;
   lastTimePlayed: Date | null;
@@ -105,6 +106,8 @@ export interface UserPreferences {
   downloadNotificationsEnabled: boolean;
   repackUpdatesNotificationsEnabled: boolean;
   telemetryEnabled: boolean;
+  debridServicesEnabled: boolean;
+  realDebridAPIKey: string | null;
 }
 
 export interface HowLongToBeatCategory {
